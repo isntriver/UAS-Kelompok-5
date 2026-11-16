@@ -1,26 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asterio | Tentang Kami</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — ASTERIO</title>
+  <link rel="stylesheet" href="pages.css" />
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-inner">
-            <a class="brand" href="index.html" aria-label="Asterio home">ASTERIO</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-logo" aria-label="Asterio home" href="index.html">ASTERIO</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="callcenter.html">Call Center</a>
+      </nav>
+      <img class="header-icons" alt="Search, shopping bag, and account" src="assets/header-icons.svg" />
+    </div>
+  </header>
 
-            <nav class="main-nav" aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="catalog.html">Catalog</a>
-                <a href="callcenter.html">Call Center</a>
-            </nav>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="page-badge">Our Story</span>
+        <h1>Bringing Authentic Apple Experience Closer to You</h1>
+        <p>ASTERIO hadir sebagai destinasi terpercaya untuk menemukan seri iPhone terbaru dengan jaminan keaslian 100%, layanan purna jual transparan, dan pengiriman cepat ke seluruh Indonesia.</p>
+      </div>
+    </section>
 
-            <img class="header-icons" src="assets/header-icons.svg" alt="Search, shopping bag, and account">
+    <section class="section-block">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-content">
+            <h2>Mengapa Memilih ASTERIO?</h2>
+            <p>Berawal dari semangat menghadirkan perangkat teknologi terbaik tanpa rasa khawatir, ASTERIO memastikan setiap unit iPhone yang kami pasarkan memiliki nomor IMEI resmi terdaftar, garansi terverifikasi, serta segel pabrik yang utuh.</p>
+            <p>Kami tidak sekadar menjual perangkat—tim spesialis kami membantu kamu memilih seri iPhone yang paling sesuai dengan kebutuhan produktivitas, fotografi, maupun program <em>Easy Trade-In</em>.</p>
+            <div style="margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="catalog.html" class="btn-primary">Explore Catalog</a>
+              <a href="callcenter.html" class="btn-outline">Hubungi Konsultan</a>
+            </div>
+          </div>
+          <div class="story-visual">
+            <img src="assets/iphone-17-figma.png" alt="iPhone Flagship Showcase" />
+          </div>
         </div>
-    </header>
+
+        <div class="stats-bar">
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Produk Apple Original</p>
+          </div>
+          <div class="stat-item">
+            <h3>15K+</h3>
+            <p>Pelanggan Puas</p>
+          </div>
+          <div class="stat-item">
+            <h3>34</h3>
+            <p>Provinsi Terjangkau</p>
+          </div>
+          <div class="stat-item">
+            <h3>24/7</h3>
+            <p>Dukungan Pelanggan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" style="padding-top: 0;">
+      <div class="container">
+        <h2 style="font-size: 1.85rem; text-align: center;">Komitmen Layanan Kami</h2>
+        <div class="values-grid">
+          <article class="value-card">
+            <img src="assets/benefit-shield.svg" alt="Original Guarantee" />
+            <h3>100% Original</h3>
+            <p>Setiap unit dijamin asli dengan garansi resmi serta pengecekan IMEI transparan sebelum pengiriman.</p>
+          </article>
+          <article class="value-card">
+            <img src="assets/delivery.svg" alt="Fast Delivery" />
+            <h3>Fast & Insured Delivery</h3>
+            <p>Pengiriman berasuransi penuh dengan pengemasan ekstra aman ke seluruh kota di Indonesia.</p>
+          </article>
+          <article class="value-card">
+            <img src="assets/headset.svg" alt="24/7 Support" />
+            <h3>24/7 Expert Support</h3>
+            <p>Tim Call Center siap membantu konsultasi spesifikasi, klaim garansi, hingga proses tukar tambah.</p>
+          </article>
+          <article class="value-card">
+            <img src="assets/payment.svg" alt="Secure Payment" />
+            <h3>Secure Payment</h3>
+            <p>Mendukung berbagai metode pembayaran aman, cicilan 0%, dan verifikasi transaksi instan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand-logo" aria-label="Asterio home" href="index.html">ASTERIO</a>
+        <p>Your Trusted iPhone Store</p>
+        <p>© 2026 ASTERIO. All rights reserved</p>
+      </div>
+      <div class="footer-social">
+        <h2>Follow Us</h2>
+        <ul class="social-list" aria-label="ASTERIO on social media">
+          <li><img alt="YouTube" src="assets/footer-youtube.svg" /></li>
+          <li><img alt="Facebook" src="assets/footer-facebook-mark.svg" /></li>
+          <li><img alt="Instagram" src="assets/footer-instagram.svg" /></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
