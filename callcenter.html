@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asterio | Call Center</title>
+    <title>Call Center | Asterio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -16,11 +20,166 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="catalog.html">Catalog</a>
-                <a href="callcenter.html">Call Center</a>
+                <a href="callcenter.html" class="active">Call Center</a>
             </nav>
 
             <img class="header-icons" src="assets/header-icons.svg" alt="Search, shopping bag, and account">
         </div>
     </header>
+
+    <main>
+        <section class="page-hero">
+            <span class="page-badge">24/7 Customer Care</span>
+            <h1>How Can We <span>Help You Today?</span></h1>
+            <p>Tim dukungan ASTERIO siap membantu konsultasi produk, pengecekan status pesanan, layanan Trade-In, hingga bantuan klaim garansi resmi.</p>
+        </section>
+
+        <section class="section-block">
+            <div class="page-container">
+                <div class="support-channels">
+                    <div class="channel-card">
+                        <div class="channel-icon">💬</div>
+                        <h3>WhatsApp Live Chat</h3>
+                        <p>Respon cepat dalam hitungan menit untuk cek stok & pemesanan.</p>
+                        <a href="#contactFormSection" class="btn-outline">+62 838-7055-5402</a>
+                    </div>
+                    <div class="channel-card">
+                        <div class="channel-icon">📞</div>
+                        <h3>Hotline 24/7</h3>
+                        <p>Layanan telepon bebas pulsa untuk bantuan darurat & garansi.</p>
+                        <a href="#contactFormSection" class="btn-outline">siapa yah</a>
+                    </div>
+                    <div class="channel-card">
+                        <div class="channel-icon">✉️</div>
+                        <h3>Email Support</h3>
+                        <p>Kirim pertanyaan detail, invoice korporat, atau pengajuan Trade-In.</p>
+                        <a href="#contactFormSection" class="btn-outline">asterio5@pnj.asterio.ac.id</a>
+                    </div>
+                </div>
+
+                <div class="contact-layout" id="contactFormSection">
+                    <div class="contact-form-card">
+                        <h2>Kirim Pesan ke Tim Kami</h2>
+                        <p>Isi formulir di bawah ini, spesialis kami akan segera menghubungimu.</p>
+
+                        <form id="supportForm">
+                            <div class="form-group">
+                                <label for="fullName">Nama Lengkap</label>
+                                <input type="text" id="fullName" placeholder="Masukkan nama lengkap" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email atau Nomor WhatsApp</label>
+                                <input type="text" id="email" placeholder="contoh@email.com / 0812xxxx" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="topic">Topik Layanan</label>
+                                <select id="topic">
+                                    <option value="order">Pemesanan & Ketersediaan Stok</option>
+                                    <option value="trade-in">Program Easy Trade-In</option>
+                                    <option value="warranty">Klaim Garansi & Service</option>
+                                    <option value="delivery">Pelacakan Pengiriman</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Detail Pesan</label>
+                                <textarea id="message" rows="4" placeholder="Tuliskan tipe iPhone atau kendala yang ingin ditanyakan..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary" style="width: 100%;">Kirim Permintaan Bantuan</button>
+                            <div class="form-feedback" id="formFeedback">
+                                Terima kasih! Tiket bantuanmu telah diterima. Tim ASTERIO akan segera menghubungimu.
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="faq-section">
+                        <h2>Pertanyaan Umum (FAQ)</h2>
+
+                        <div class="faq-item open">
+                            <button class="faq-question" type="button">
+                                <span>Apakah semua iPhone di ASTERIO bergaransi resmi?</span>
+                                <span>+</span>
+                            </button>
+                            <div class="faq-answer">
+                                Ya, seluruh unit yang dijual di ASTERIO 100% original, segel baru (BNIB), IMEI terdaftar resmi di Kemenperin, dan dilindungi garansi resmi 1 tahun.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" type="button">
+                                <span>Bagaimana cara mengikuti program Easy Trade-In?</span>
+                                <span>+</span>
+                            </button>
+                            <div class="faq-answer">
+                                Kamu cukup memilih topik "Program Easy Trade-In" pada formulir di samping dan mencantumkan tipe iPhone lamamu beserta kondisi fisiknya untuk mendapatkan estimasi harga tukar tambah.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" type="button">
+                                <span>Berapa lama estimasi pengiriman ke luar Jakarta?</span>
+                                <span>+</span>
+                            </button>
+                            <div class="faq-answer">
+                                Untuk wilayah Jabodetabek tersedia layanan Instant/Same-Day Delivery. Untuk luar Jabodetabek memakan waktu 1–3 hari kerja dengan asuransi penuh.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" type="button">
+                                <span>Apakah tersedia metode pembayaran cicilan?</span>
+                                <span>+</span>
+                            </button>
+                            <div class="faq-answer">
+                                Tersedia cicilan 0% hingga 24 bulan menggunakan kartu kredit bank rekanan maupun layanan paylater terverifikasi.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+        <div class="footer-left">
+            <div class="footer-brand-block">
+                <a class="brand footer-brand" href="index.html" aria-label="Asterio home">ASTERIO</a>
+                <p>Your Trusted iPhone Store</p>
+            </div>
+            <p class="footer-copyright">© 2026 ASTERIO. All rights reserved</p>
+        </div>
+
+        <div class="footer-social">
+            <h2>Follow Us</h2>
+            <ul class="social-links" aria-label="ASTERIO on social media">
+                <li class="social-icon social-icon--youtube">
+                    <img src="assets/footer-youtube.svg" alt="YouTube">
+                </li>
+                <li class="social-icon social-icon--facebook">
+                    <img src="assets/footer-facebook-mark.svg" alt="Facebook">
+                </li>
+                <li class="social-icon social-icon--instagram">
+                    <img src="assets/footer-instagram.svg" alt="Instagram">
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.parentElement.classList.toggle('open');
+            });
+        });
+
+        document.getElementById('supportForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('formFeedback').style.display = 'block';
+            this.reset();
+        });
+    </script>
 </body>
 </html>

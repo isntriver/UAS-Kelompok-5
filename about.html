@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asterio | Tentang Kami</title>
+    <title>About | Asterio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -14,7 +18,7 @@
 
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+                <a href="about.html" class="active">About</a>
                 <a href="catalog.html">Catalog</a>
                 <a href="callcenter.html">Call Center</a>
             </nav>
@@ -22,5 +26,112 @@
             <img class="header-icons" src="assets/header-icons.svg" alt="Search, shopping bag, and account">
         </div>
     </header>
+
+    <main>
+        <section class="page-hero">
+            <span class="page-badge">Our Story</span>
+            <h1>Bringing Authentic Apple Experience <span>Closer to You</span></h1>
+            <p>ASTERIO hadir sebagai destinasi terpercaya untuk menemukan seri iPhone terbaru dengan jaminan keaslian 100%, layanan purna jual transparan, dan pengiriman cepat ke seluruh Indonesia.</p>
+        </section>
+
+        <section class="benefits" aria-label="Shopping benefits">
+            <ul class="benefit-list">
+                <li class="benefit">
+                    <span class="benefit-icon benefit-icon--shield" aria-hidden="true">
+                        <img src="assets/benefit-shield.svg" alt="">
+                        <img src="assets/benefit-check.svg" alt="">
+                    </span>
+                    <span class="benefit-copy">
+                        <strong>100% Original</strong>
+                        <small>Guaranteed authentic Apple product</small>
+                    </span>
+                </li>
+                <li class="benefit">
+                    <img class="benefit-icon" src="assets/delivery.svg" alt="" aria-hidden="true">
+                    <span class="benefit-copy">
+                        <strong>Fast Delivery</strong>
+                        <small>Across Indonesia</small>
+                    </span>
+                </li>
+                <li class="benefit">
+                    <img class="benefit-icon" src="assets/headset.svg" alt="" aria-hidden="true">
+                    <span class="benefit-copy">
+                        <strong>24/7 Support</strong>
+                        <small>Always here for you</small>
+                    </span>
+                </li>
+                <li class="benefit">
+                    <img class="benefit-icon" src="assets/payment.svg" alt="" aria-hidden="true">
+                    <span class="benefit-copy">
+                        <strong>Secure Payment</strong>
+                        <small>safe and trusted transaction</small>
+                    </span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section-block">
+            <div class="page-container">
+                <div class="story-grid">
+                    <div class="story-content">
+                        <h2>Mengapa Memilih ASTERIO?</h2>
+                        <p>Berawal dari semangat menghadirkan perangkat teknologi terbaik tanpa rasa khawatir, ASTERIO memastikan setiap unit iPhone yang kami pasarkan memiliki nomor IMEI resmi terdaftar, garansi terverifikasi, serta segel pabrik yang utuh.</p>
+                        <p>Kami tidak sekadar menjual perangkat—tim spesialis kami membantu kamu memilih seri iPhone yang paling sesuai dengan kebutuhan produktivitas, fotografi, maupun program <em>Easy Trade-In</em>.</p>
+                        <div style="margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="catalog.html" class="btn-primary">Explore Catalog</a>
+                            <a href="callcenter.html" class="btn-outline">Hubungi Konsultan</a>
+                        </div>
+                    </div>
+                    <div class="story-visual">
+                        <img src="assets/iphone-17-figma.png" alt="iPhone Flagship Showcase">
+                    </div>
+                </div>
+
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Produk Apple Original</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>15K+</h3>
+                        <p>Pelanggan Puas</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>34</h3>
+                        <p>Provinsi Terjangkau</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Dukungan Pelanggan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+        <div class="footer-left">
+            <div class="footer-brand-block">
+                <a class="brand footer-brand" href="index.html" aria-label="Asterio home">ASTERIO</a>
+                <p>Your Trusted iPhone Store</p>
+            </div>
+            <p class="footer-copyright">© 2026 ASTERIO. All rights reserved</p>
+        </div>
+
+        <div class="footer-social">
+            <h2>Follow Us</h2>
+            <ul class="social-links" aria-label="ASTERIO on social media">
+                <li class="social-icon social-icon--youtube">
+                    <img src="assets/footer-youtube.svg" alt="YouTube">
+                </li>
+                <li class="social-icon social-icon--facebook">
+                    <img src="assets/footer-facebook-mark.svg" alt="Facebook">
+                </li>
+                <li class="social-icon social-icon--instagram">
+                    <img src="assets/footer-instagram.svg" alt="Instagram">
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

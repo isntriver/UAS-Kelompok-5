@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asterio | Katalog Produk</title>
+    <title>Catalog | Asterio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -15,12 +19,186 @@
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="catalog.html">Catalog</a>
+                <a href="catalog.html" class="active">Catalog</a>
                 <a href="callcenter.html">Call Center</a>
             </nav>
 
             <img class="header-icons" src="assets/header-icons.svg" alt="Search, shopping bag, and account">
         </div>
     </header>
+
+    <main>
+        <section class="page-hero">
+            <span class="page-badge">2026 Lineup</span>
+            <h1>Explore Our <span>iPhone Catalog</span></h1>
+            <p>Temukan varian warna, kapasitas penyimpanan, dan seri iPhone terbaik yang sesuai dengan gaya hidupmu.</p>
+        </section>
+
+        <section class="section-block">
+            <div class="page-container">
+                <div class="catalog-controls">
+                    <div class="filter-tabs" role="tablist">
+                        <button class="filter-btn active" data-filter="all">All Models</button>
+                        <button class="filter-btn" data-filter="iphone-17">iPhone 17</button>
+                        <button class="filter-btn" data-filter="iphone-air">iPhone Air</button>
+                        <button class="filter-btn" data-filter="iphone-duo">iPhone Duo</button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" id="catalogSearch" placeholder="Cari model atau warna iPhone..." aria-label="Cari produk">
+                    </div>
+                </div>
+
+                <div class="catalog-grid">
+                    <article class="catalog-card" data-category="iphone-17" data-name="iPhone 17 Sage Green">
+                        <div>
+                            <span class="product-tag">Best Seller</span>
+                            <div class="catalog-img-wrap">
+                                <img src="assets/iphone-17-figma.png" alt="iPhone 17 Sage Green">
+                            </div>
+                            <div class="catalog-info">
+                                <h3>Iphone 17</h3>
+                                <p class="product-specs">Sage Green • 128GB / 256GB • A19 Chip</p>
+                                <p class="product-price">Rp 16.499.000</p>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-outline" onclick="openDetail('Iphone 17', 'Rp 16.499.000', 'Layar Super Retina XDR 6.1 inci, Chip A19 Bionic, Dual Camera 48MP, Garansi Resmi 1 Tahun.')">Detail</button>
+                            <a href="callcenter.html" class="btn-primary">Order Now</a>
+                        </div>
+                    </article>
+
+                    <article class="catalog-card" data-category="iphone-air" data-name="iPhone Air Silver Blue">
+                        <div>
+                            <span class="product-tag">Ultra Thin</span>
+                            <div class="catalog-img-wrap">
+                                <img src="assets/iphone-air-figma.png" alt="iPhone Air Silver & Blue">
+                            </div>
+                            <div class="catalog-info">
+                                <h3>Iphone Air</h3>
+                                <p class="product-specs">Silver & Sky Blue • 256GB • Desain Ultra Tipis</p>
+                                <p class="product-price">Rp 18.999.000</p>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-outline" onclick="openDetail('Iphone Air', 'Rp 18.999.000', 'Bodi aluminium ultra-tipis 5.5mm, Layar ProMotion 120Hz 6.5 inci, Baterai seharian penuh.')">Detail</button>
+                            <a href="callcenter.html" class="btn-primary">Order Now</a>
+                        </div>
+                    </article>
+
+                    <article class="catalog-card" data-category="iphone-duo" data-name="iPhone Duo Dual Edition">
+                        <div>
+                            <span class="product-tag">New Arrival</span>
+                            <div class="catalog-img-wrap">
+                                <img src="assets/iphone-duo-figma.png" alt="iPhone Duo">
+                            </div>
+                            <div class="catalog-info">
+                                <h3>Iphone Duo</h3>
+                                <p class="product-specs">Titanium Finish • 512GB • Pro Camera System</p>
+                                <p class="product-price">Rp 21.499.000</p>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-outline" onclick="openDetail('Iphone Duo', 'Rp 21.499.000', 'Performa flagship untuk multitasking, Kamera Telephoto 5x Optical Zoom, USB-C kecepatan tinggi.')">Detail</button>
+                            <a href="callcenter.html" class="btn-primary">Order Now</a>
+                        </div>
+                    </article>
+
+                    <article class="catalog-card" data-category="iphone-17" data-name="iPhone 17 Pro Camera Edition">
+                        <div>
+                            <span class="product-tag">Pro Series</span>
+                            <div class="catalog-img-wrap">
+                                <img src="assets/trade-in-phone-figma.png" alt="iPhone 17 Pro">
+                            </div>
+                            <div class="catalog-info">
+                                <h3>Iphone 17 Pro</h3>
+                                <p class="product-specs">Graphite • 256GB / 512GB • Triple Pro Camera</p>
+                                <p class="product-price">Rp 23.999.000</p>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-outline" onclick="openDetail('Iphone 17 Pro', 'Rp 23.999.000', 'Sistem tiga kamera Pro 48MP, Perekaman ProRes 4K 120fps, Rangka Titanium ringan.')">Detail</button>
+                            <a href="callcenter.html" class="btn-primary">Order Now</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="detailModal" role="dialog" aria-modal="true">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeDetail()" aria-label="Tutup">&times;</button>
+            <span class="page-badge">Product Specification</span>
+            <h2 id="modalTitle" style="margin-bottom: 0.4rem;">Iphone 17</h2>
+            <p id="modalPrice" style="font-weight: 700; color: #f2852e; margin-bottom: 1rem;">Rp 16.499.000</p>
+            <p id="modalDesc" style="color: #6e6e73; margin-bottom: 1.5rem; line-height: 1.6;"></p>
+            <a href="callcenter.html" class="btn-primary" style="width: 100%;">Pesan / Konsultasi via Call Center</a>
+        </div>
+    </div>
+
+    <footer class="site-footer" id="site-footer">
+        <div class="footer-left">
+            <div class="footer-brand-block">
+                <a class="brand footer-brand" href="index.html" aria-label="Asterio home">ASTERIO</a>
+                <p>Your Trusted iPhone Store</p>
+            </div>
+            <p class="footer-copyright">© 2026 ASTERIO. All rights reserved</p>
+        </div>
+
+        <div class="footer-social">
+            <h2>Follow Us</h2>
+            <ul class="social-links" aria-label="ASTERIO on social media">
+                <li class="social-icon social-icon--youtube">
+                    <img src="assets/footer-youtube.svg" alt="YouTube">
+                </li>
+                <li class="social-icon social-icon--facebook">
+                    <img src="assets/footer-facebook-mark.svg" alt="Facebook">
+                </li>
+                <li class="social-icon social-icon--instagram">
+                    <img src="assets/footer-instagram.svg" alt="Instagram">
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.catalog-card');
+        const searchInput = document.getElementById('catalogSearch');
+        let currentFilter = 'all';
+
+        function filterProducts() {
+            const keyword = searchInput.value.toLowerCase().trim();
+            cards.forEach(card => {
+                const category = card.dataset.category;
+                const name = card.dataset.name.toLowerCase();
+                const matchCat = currentFilter === 'all' || category === currentFilter;
+                const matchSearch = name.includes(keyword);
+                card.style.display = (matchCat && matchSearch) ? 'flex' : 'none';
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                filterProducts();
+            });
+        });
+
+        searchInput.addEventListener('input', filterProducts);
+
+        function openDetail(title, price, desc) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalPrice').textContent = price;
+            document.getElementById('modalDesc').textContent = desc;
+            document.getElementById('detailModal').classList.add('show');
+        }
+
+        function closeDetail() {
+            document.getElementById('detailModal').classList.remove('show');
+        }
+    </script>
 </body>
 </html>
