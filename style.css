@@ -42,13 +42,20 @@ a {
 }
 
 .brand {
-    color: var(--color-orange);
-    font-family: "Science Gothic", "Arial Black", sans-serif;
-    font-size: min(32px, 2.2222vw);
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    line-height: 1;
+    display: block;
+    line-height: 0;
+    width: min(154px, 10.6944vw);
     white-space: nowrap;
+}
+
+.brand-logo {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.footer-brand {
+    width: 180px;
 }
 
 .main-nav {
@@ -77,10 +84,12 @@ a {
 }
 
 .hero {
-    aspect-ratio: 1440 / 461;
+    aspect-ratio: 1320 / 370;
+    border-radius: 28px;
+    margin: 1.5rem auto 0;
     overflow: hidden;
     position: relative;
-    width: 100%;
+    width: min(1320px, calc(100% - 64px));
 }
 
 .hero > img {
@@ -174,7 +183,7 @@ a {
 }
 
 .products {
-    margin-top: min(92px, 6.3889vw);
+    margin-top: min(12px, 0.8333vw);
     padding: 0 min(80px, 5.5556vw);
 }
 
@@ -243,9 +252,10 @@ a {
 
 .product-photo--17 img {
     height: 100%;
-    left: -142.76%;
+    left: 0;
+    object-fit: contain;
     top: 0;
-    width: 323.09%;
+    width: 100%;
 }
 
 .product-photo--air {
@@ -256,10 +266,11 @@ a {
 }
 
 .product-photo--air img {
-    height: 136.02%;
-    left: -195.56%;
-    top: -19.76%;
-    width: 409.6%;
+    height: 100%;
+    left: 0;
+    object-fit: contain;
+    top: 0;
+    width: 100%;
 }
 
 .product-photo--duo {
@@ -270,10 +281,11 @@ a {
 }
 
 .product-photo--duo img {
-    height: 121.31%;
-    left: -144.71%;
-    top: -11.09%;
-    width: 324.06%;
+    height: 100%;
+    left: 0;
+    object-fit: contain;
+    top: 0;
+    width: 100%;
 }
 
 .product-info {
@@ -499,7 +511,7 @@ main {
     }
 
     .brand {
-        font-size: 26px;
+        width: 150px;
     }
 
     .main-nav {
@@ -557,7 +569,7 @@ main {
     }
 
     .products {
-        margin-top: 64px;
+        margin-top: 12px;
         padding: 0 30px;
     }
 
@@ -681,7 +693,7 @@ main {
     }
 
     .brand {
-        font-size: 22px;
+        width: 120px;
     }
 
     .main-nav {
@@ -721,7 +733,7 @@ main {
     }
 
     .products {
-        margin-top: 48px;
+        margin-top: 10px;
         padding: 0 20px;
     }
 

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail | Asterio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="Asterio home"><img class="brand-logo" src="assets/asterio-logo.png" alt="ASTERIO"></a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="catalog.html" class="active">Catalog</a>
+                <a href="callcenter.html">Call Center</a>
+            </nav>
+            <img class="header-icons" src="assets/header-icons.svg" alt="Search, shopping bag, and account">
+        </div>
+    </header>
+
+    <main class="detail-page">
+        <section class="detail-hero" aria-label="Detail produk">
+            <div class="detail-showcase">
+                <div class="detail-gallery">
+                    <div class="detail-main-image">
+                        <img id="detailImage" src="assets/iphone-17-figma-0.png" alt="iPhone 17">
+                    </div>
+                    <div class="detail-thumbnails" aria-label="Pilihan tampilan produk">
+                        <button class="detail-thumb active" type="button"><img id="thumbOne" src="assets/iphone-17-figma-1.png" alt=""></button>
+                        <button class="detail-thumb" type="button"><img id="thumbTwo" src="assets/iphone-17-figma-2.png" alt=""></button>
+                        <button class="detail-thumb" type="button"><img id="thumbThree" src="assets/iphone-17-figma-3.png" alt=""></button>
+                        <button class="detail-thumb" type="button"><img id="thumbFour" src="assets/iphone-17-figma-4.png" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="detail-product-info">
+                    <span class="detail-badge" id="detailTag">New</span>
+                    <h1 id="detailName">iPhone 17</h1>
+                    <p class="detail-description" id="detailDescription">A beautiful design meets powerful performance. Discover the iPhone 17 and experience innovation in every detail.</p>
+
+                    <div class="option-group">
+                        <span class="option-label">Color</span>
+                        <div class="color-options" aria-label="Pilihan warna">
+                            <button class="color-dot color-black active" type="button" aria-label="Black"></button>
+                            <button class="color-dot color-pink" type="button" aria-label="Pink"></button>
+                            <button class="color-dot color-green" type="button" aria-label="Green"></button>
+                            <button class="color-dot color-blue" type="button" aria-label="Blue"></button>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <span class="option-label">Storage</span>
+                        <div class="storage-options" aria-label="Pilihan kapasitas">
+                            <button class="storage-option active" type="button">256GB</button>
+                            <button class="storage-option" type="button">512GB</button>
+                        </div>
+                    </div>
+
+                    <p class="detail-old-price" id="detailOldPrice">Rp 19.999.000</p>
+                    <p class="detail-price" id="detailPrice">Rp 18.999.000</p>
+
+                    <div class="detail-actions">
+                        <button class="detail-cart" type="button">Add to card</button>
+                        <a id="orderLink" href="callcenter.html" class="detail-buy">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="customer-reviews" aria-labelledby="reviews-title">
+            <h2 id="reviews-title">Customer Reviews</h2>
+            <div class="review-grid">
+                <article class="review-card">
+                    <div class="review-person"><span class="review-avatar avatar-one">RP</span><strong>Risky Pratama</strong></div>
+                    <p>Barangnya bagus, niatnya mau kasih ke pacar tapi malah putus duluan wkwkwk.</p>
+                </article>
+                <article class="review-card">
+                    <div class="review-person"><span class="review-avatar avatar-two">BL</span><strong>Biru Laut</strong></div>
+                    <p>Suka banget ama warna birunya, cocok buat orang keren kaya gwe.</p>
+                </article>
+                <article class="review-card">
+                    <div class="review-person"><span class="review-avatar avatar-three">KS</span><strong>Kinanti Sanjaya</strong></div>
+                    <p>Keren iPhonenya dan benar-benar original.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="related-products" aria-labelledby="related-title">
+            <h2 id="related-title">Related Product</h2>
+            <div class="related-grid" id="relatedGrid"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+        <div class="footer-left">
+            <div class="footer-brand-block">
+                <a class="brand footer-brand" href="index.html" aria-label="Asterio home"><img class="brand-logo" src="assets/asterio-logo.png" alt="ASTERIO"></a>
+                <p>Your Trusted iPhone Store</p>
+            </div>
+            <p class="footer-copyright">&copy; 2026 ASTERIO. All rights reserved</p>
+        </div>
+        <div class="footer-social">
+            <h2>Follow Us</h2>
+            <ul class="social-links" aria-label="ASTERIO on social media">
+                <li class="social-icon"><img src="assets/footer-youtube.svg" alt="YouTube"></li>
+                <li class="social-icon"><img src="assets/footer-facebook-mark.svg" alt="Facebook"></li>
+                <li class="social-icon"><img src="assets/footer-instagram.svg" alt="Instagram"></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const products = {
+            "iphone-17": {
+                name: "iPhone 17",
+                tag: "New",
+                price: "Rp 18.999.000",
+                oldPrice: "Rp 19.999.000",
+                storage: ["256GB", "512GB"],
+                thumbs: ["assets/iphone-17-figma-1.png", "assets/iphone-17-figma-2.png", "assets/iphone-17-figma-3.png", "assets/iphone-17-figma-4.png"],
+                image: "assets/iphone-17-figma-0.png",
+                alt: "iPhone 17 Sage Green",
+                description: "A beautiful design meets powerful performance. Discover the iPhone 17 and experience innovation in every detail."
+            },
+            "iphone-air": {
+                name: "iPhone Air",
+                tag: "Ultra Thin",
+                price: "Rp 16.999.000",
+                oldPrice: "Rp 21.499.000",
+                storage: ["256GB", "512GB", "1TB"],
+                thumbs: ["assets/iphone-air-figma-1.png", "assets/iphone-air-figma-2.png", "assets/iphone-air-figma-3.png", "assets/iphone-air-figma-4.png"],
+                image: "assets/iphone-air-figma-0.png",
+                alt: "iPhone Air Silver dan Sky Blue",
+                description: "Ultra-thin design. Effortless elegance. Powerful performance. Discover the all-new iPhone Air."
+            },
+            "iphone-duo": {
+                name: "iPhone Duo",
+                tag: "New Arrival",
+                price: "Rp 45.499.000",
+                oldPrice: "Rp 46.499.000",
+                storage: ["256GB", "512GB", "1TB", "2TB"],
+                thumbs: ["assets/iphone-duo-figma-1.png", "assets/iphone-duo-figma-2.png", "assets/iphone-duo-figma-3.png", "assets/iphone-duo-figma-4.png"],
+                image: "assets/iphone-duo-figma-0.png",
+                alt: "iPhone Duo dengan Titanium Finish",
+                description: "Unfold possibilities. Experience a new dimension of design, performance, and versatility with iPhone Duo."
+            },
+            "iphone-17-pro": {
+                name: "iPhone 17 Pro",
+                tag: "Pro Series",
+                price: "Rp 22.999.000",
+                oldPrice: "Rp 24.999.000",
+                storage: ["256GB", "512GB", "1TB", "2TB"],
+                thumbs: ["assets/iphone-17-pro-figma-1.png", "assets/iphone-17-pro-figma-2.png", "assets/iphone-17-pro-figma-3.png", "assets/iphone-17-pro-figma-4.png"],
+                image: "assets/iphone-17-pro-figma-0.png",
+                alt: "iPhone 17 Pro",
+                description: "Pro-level performance. Professional photography. Premium design. Discover the power of iPhone 17 Pro."
+            },
+            "iphone-16": {
+                name: "iPhone 16",
+                tag: "Classic",
+                price: "Rp 16.999.000",
+                oldPrice: "Rp 17.999.000",
+                storage: ["128GB", "256GB", "512GB"],
+                thumbs: ["assets/iphone-16-figma-1.png", "assets/iphone-16-figma-2.png", "assets/iphone-16-figma-3.png", "assets/iphone-16-figma-4.png"],
+                image: "assets/iphone-16-figma-0.png",
+                alt: "iPhone 16",
+                description: "Powerful performance, stunning photography, and timeless design. Meet the iPhone 16, made for everything you do."
+            }
+        };
+
+        const productId = new URLSearchParams(window.location.search).get("id");
+        const product = products[productId] || products["iphone-17"];
+
+        document.title = `${product.name} | Asterio`;
+        document.getElementById("detailTag").textContent = product.tag;
+        document.getElementById("detailName").textContent = product.name;
+        document.getElementById("detailPrice").textContent = product.price;
+        document.getElementById("detailOldPrice").textContent = product.oldPrice;
+        document.getElementById("detailDescription").textContent = product.description;
+
+        const detailImage = document.getElementById("detailImage");
+        detailImage.src = product.image;
+        detailImage.alt = product.alt;
+
+        ["thumbOne", "thumbTwo", "thumbThree", "thumbFour"].forEach((id, index) => {
+            document.getElementById(id).src = product.thumbs[index];
+        });
+
+        const storageOptions = document.querySelector(".storage-options");
+        storageOptions.innerHTML = product.storage
+            .map((capacity, index) => `<button class="storage-option${index === 0 ? " active" : ""}" type="button">${capacity}</button>`)
+            .join("");
+
+        storageOptions.querySelectorAll(".storage-option").forEach(button => {
+            button.addEventListener("click", () => {
+                storageOptions.querySelectorAll(".storage-option").forEach(item => item.classList.remove("active"));
+                button.classList.add("active");
+            });
+        });
+
+        document.querySelectorAll(".detail-thumb").forEach((button, index) => {
+            button.addEventListener("click", () => {
+                document.querySelectorAll(".detail-thumb").forEach(item => item.classList.remove("active"));
+                button.classList.add("active");
+                const thumbnailImage = button.querySelector("img");
+                if (thumbnailImage) {
+                    detailImage.src = thumbnailImage.src;
+                    detailImage.alt = product.alt;
+                }
+            });
+        });
+
+        document.getElementById("relatedGrid").innerHTML =
+            Object.entries(products)
+                .filter(([id]) => id !== productId)
+                .slice(0, 4)
+                .map(([id, item]) => `
+                    <a class="related-card" href="product-detail.html?id=${id}">
+                        <div class="related-image"><img src="${item.image}" alt="${item.alt}"></div>
+                        <h3>${item.name}</h3>
+                        <p>${item.price}</p>
+                        <span class="related-arrow" aria-hidden="true">&rarr;</span>
+                    </a>
+                `).join("");
+
+        document.querySelectorAll(".color-dot").forEach(button => {
+            button.addEventListener("click", () => {
+                document.querySelectorAll(".color-dot").forEach(item => item.classList.remove("active"));
+                button.classList.add("active");
+            });
+        });
+
+        document.querySelectorAll(".storage-option").forEach(button => {
+            button.addEventListener("click", () => {
+                document.querySelectorAll(".storage-option").forEach(item => item.classList.remove("active"));
+                button.classList.add("active");
+            });
+        });
+    </script>
+</body>
+</html>
